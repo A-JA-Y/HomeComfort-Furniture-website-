@@ -1,8 +1,7 @@
 import React from "react";
 import logo from "../images/Designer.png";
 import { FaTwitter, FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+
 
 export default function Navbar() {
   return (
