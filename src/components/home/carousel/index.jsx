@@ -1,54 +1,99 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 import one from "../../images/1.jpg";
 import two from "../../images/2.jpg";
 import three from "../../images/3.jpg";
-
-import React from "react";
+import { useState, useEffect } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import "./style.css";
 
 export default function MyCarousel() {
+  const images = [
+    { src: one, alt: "Image 1" },
+    { src: two, alt: "Image 2" },
+    { src: three, alt: "Image 3" },
+  ];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isSliding, setIsSliding] = useState(false);
+
+  const handlePrevious = () => {
+    setIsSliding(true);
+    setActiveIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : 0));
+  };
+  const handleNext = () => {
+    setIsSliding(true);
+    setActiveIndex((prevIndex) =>
+      prevIndex < images.length - 1 ? prevIndex + 1 : prevIndex
+    );
+  };
+
+  useEffect(() => {
+    if (isSliding) {
+      const timer = setTimeout(() => {
+        setIsSliding(false);
+      }, 500); 
+      return () => clearTimeout(timer); 
+    }
+  }, [isSliding]);
+
   return (
     <>
-      <Carousel className="rounded-xl bg-yellow-100 ">
-        <div className="relative">
-          <img src={one} />
-          <div className="imgDetail  absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out transform group-hover:scale-105">
-            <h1 className="text-white text-5xl font-bold">Sofa Collection</h1>
-            <p className="text-white">
-              Premium design sofas are available.
-              <br />
-              Just click on visit our showroom!
-            </p>
+      <div className="carousel max-w-full mx-auto ">
+        <div className="flex  items-center content-center">
+          <div className={`imag-container ${isSliding ? "slide" : ""} w-full`}>
+            <img
+              src={images[activeIndex].src}
+              alt={images[activeIndex].alt}
+              className="w-full"
+            />
+
+            <div className="flex flex-col items-center justify-center absolute w-full h-full hover:bg-black/50 hover:bg-opacity-5 transition delay-50  ">
+              {activeIndex === 0 ? (
+                <span className="py-10 text-center text-white">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
+                    Premium Quality Sofas
+                  </h1>
+                  <br />
+                  Just Click on the button below!
+                </span>
+              ) : activeIndex === 1 ? (
+                <span className="py-10 text-center text-white">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
+                    World Class Interior Design and Setup
+                  </h1>
+                  <br />
+                  Just Click on the button below!
+                </span>
+              ) : (
+                <span className="py-10 text-center text-white">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
+                    Premium Quality Sofas
+                  </h1>
+                  <br />
+                  Just Click on the button below!
+                </span>
+              )}
+              <button className=" hover:cursor-pointer hover:scale-110 transition-transform bg-green-700 w-36 h-10 rounded outline-none hover:bg-green-500 delay-50 p-1 text-xs font-medium ">
+                Visit Our Showroom
+              </button>
+            </div>
           </div>
-          <p className="legend hover:cursor-pointer">Visit Our Showroom</p>
+          {activeIndex > 0 && (
+            <button
+              className="absolute bg-slate-500 w-9 h-9  rounded-full float-left hover:text-green-600 transition-colors  delay-200"
+              onClick={handlePrevious}
+            >
+              <FaArrowLeft className=" m-2" />
+            </button>
+          )}
+          {activeIndex < images.length - 1 && (
+            <button
+              className=" bg-slate-500 w-9 h-9  rounded-full absolute right-0 hover:text-green-600 transition-colors  delay-200  "
+              onClick={handleNext}
+            >
+              <FaArrowRight className="m-2" />
+            </button>
+          )}
         </div>
-        <div>
-          <img src={two} />
-          <div className="imgDetail  absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out transform group-hover:scale-105">
-            <h1 className="text-white text-5xl font-bold">Interior Design</h1>
-            <p className="text-white">
-              We design world class elegant interior with clean and soft finish.
-              <br />
-              Just click on visit our showroom!
-            </p>
-          </div>
-          <p className="legend hover:cursor-pointer">Visit Our Showroom</p>
-        </div>
-        <div>
-          <img src={three} />
-          <div className="imgDetail  absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out transform group-hover:scale-105">
-            <h1 className="text-white text-5xl font-bold">
-              Wooden Accesories Collection
-            </h1>
-            <p className="text-white">
-              Premium design Wooden Accesories for your home are awailable.
-              <br />
-              Just click on visit our showroom!
-            </p>
-          </div>
-          <p className="legend hover:cursor-pointer">Visit Our Showroom</p>
-        </div>
-      </Carousel>
+      </div>
     </>
   );
 }
