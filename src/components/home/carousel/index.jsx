@@ -38,17 +38,17 @@ export default function MyCarousel() {
     <>
       <div className="carousel max-w-full mx-auto ">
         <div className="flex  items-center content-center">
-          <div className={`imag-container ${isSliding ? "slide" : ""} w-full`}>
+          <div className={`imag-container ${isSliding ? "slide" : ""} w-full `}>
             <img
               src={images[activeIndex].src}
               alt={images[activeIndex].alt}
               className="w-full"
             />
 
-            <div className="flex flex-col items-center justify-center absolute w-full h-full hover:bg-black/50 hover:bg-opacity-5 transition delay-50  ">
+            <div className="flex flex-col items-center justify-center absolute w-full  h-full hover:bg-black/50  hover:bg-opacity-5 transition delay-50  ">
               {activeIndex === 0 ? (
                 <span className="py-10 text-center text-white">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold stroked ">
                     Premium Quality Sofas
                   </h1>
                   <br />
@@ -56,7 +56,7 @@ export default function MyCarousel() {
                 </span>
               ) : activeIndex === 1 ? (
                 <span className="py-10 text-center text-white">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold stroked">
                     World Class Interior Design and Setup
                   </h1>
                   <br />
@@ -64,8 +64,8 @@ export default function MyCarousel() {
                 </span>
               ) : (
                 <span className="py-10 text-center text-white">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
-                    Premium Quality Sofas
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold stroked">
+                    Wooden Home Accesories
                   </h1>
                   <br />
                   Just Click on the button below!

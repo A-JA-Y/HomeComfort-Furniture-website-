@@ -11,13 +11,13 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-lg ">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between">
+      <div className="max-w-6xl mx-auto px-4 ">
+        <div className="flex justify-between ">
           <div className="flex space-x-7">
             <div>
               <a href="#" className="flex items-center py-4 px-2">
-                <img src={logo} alt="Logo" className="h-8 w-8 mr-2" />
-                <span className="font-semibold text-gray-500 text-lg hover:text-green-600 transition delay-300">
+                <img src={logo} alt="Logo" className="h-8 w-8 mr-2 hover:scale-110 rounded drop-shadow-md " />
+                <span className="font-semibold text-gray-500 text-lg hover:text-green-600 transition delay-300 ">
                   EcoFurniture
                 </span>
               </a>
@@ -29,12 +29,12 @@ export default function Navbar() {
               href="#"
               className="py-4 px-2 text-green-500  border-green-500 font-semibold "
             >
-              <div className="home flex text-center items-center content-evenly"><FaHome className="mx-1"/>Home</div>
+              <div className="home flex text-center items-center content-evenly"><FaHome className="mx-1 "/>Home</div>
               
             </a>
             <a
               href="#"
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 "
             >
               Products
             </a>
@@ -56,25 +56,25 @@ export default function Navbar() {
               href="#"
               className="py-4 px-2  text-gray-500 font-semibold hover:text-black transition duration-300 "
             >
-              <FaGithub className="w-6 hover:h-7 transition duration-400"/>
+              <FaGithub className="w-7 h-6 hover:h-7 transition duration-400 drop-shadow-xl"/>
             </a>
             <a
               href="#"
               className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-800 transition duration-300"
             >
-              <FaLinkedin className="w-6 hover:h-7 transition duration-400"/>
+              <FaLinkedin className="w-7 h-6 hover:h-7 transition duration-400 drop-shadow-xl"/>
             </a>
             <a
               href="#"
               className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300"
             >
-              <FaTwitter className="w-6 hover:h-7 transition duration-400"/>
+              <FaTwitter className="w-7 h-6 hover:h-7 transition duration-400 drop-shadow-xl"/>
             </a>
             <a
               href="#"
               className="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300"
             >
-              <FaYoutube className="w-6 hover:h-7 transition duration-400"/>
+              <FaYoutube className="w-7 h-6 hover:h-7 transition duration-400 drop-shadow-xl"/>
             </a>
           </div>
           {/* Mobile menu button */}

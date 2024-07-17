@@ -1,15 +1,15 @@
 import "./App.css";
-import MyCarousel from "./components/home/carousel";
-import SaleCoutdown from "./components/home/saleCoutdown";
+
 
 import Navbar from "./components/navbar";
+import Home from "./pages/home";
 
 function App() {
   return (
     <>
       <Navbar />
-      <MyCarousel />
-      <SaleCoutdown />
+      
+      <Home/>
     </>
   );
 }

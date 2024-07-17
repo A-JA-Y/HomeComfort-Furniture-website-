@@ -1,29 +1,28 @@
 .imag-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  animation: slide 0.5s ease-in-out 1;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .slide {
-    animation: slide 0.5s ease-in-out 1;
+  50% {
+    transform: translateY(5%);
+    opacity: 0;
   }
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    50% {
-      transform: translateY(5%);
-      opacity: 0.0;
-      
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
+}
+
+
