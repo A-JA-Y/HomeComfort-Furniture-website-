@@ -48,7 +48,7 @@ export default function MyCarousel() {
             <div className="flex flex-col items-center justify-center absolute w-full  h-full hover:bg-black/50  hover:bg-opacity-5 transition delay-50  ">
               {activeIndex === 0 ? (
                 <span className="py-10 text-center text-white">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold stroked ">
+                  <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold  stroked ">
                     Premium Quality Sofas
                   </h1>
                   <br />
