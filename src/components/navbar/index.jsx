@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from 'react-router-dom'
 import logo from "../images/Designer.png";
 import { FaTwitter, FaLinkedin, FaGithub, FaYoutube, FaHome } from "react-icons/fa";
 
@@ -15,41 +16,41 @@ export default function Navbar() {
         <div className="flex justify-between ">
           <div className="flex space-x-7">
             <div>
-              <a href="#" className="flex items-center py-4 px-2">
+              <NavLink to={'/'} className="flex items-center py-4 px-2">
                 <img src={logo} alt="Logo" className="h-8 w-8 mr-2 hover:scale-110 rounded drop-shadow-md " />
                 <span className="font-semibold text-gray-500 text-lg hover:text-green-600 transition delay-300 ">
                   EcoFurniture
                 </span>
-              </a>
+              </NavLink>
             </div>
           </div>
 
           <div className="hidden md:flex items-center space-x-1">
-            <a
-              href="#"
+            <NavLink
+              to={'/'}
               className="py-4 px-2 text-green-500  border-green-500 font-semibold "
             >
               <div className="home flex text-center items-center content-evenly"><FaHome className="mx-1 "/>Home</div>
               
-            </a>
-            <a
-              href="#"
+            </NavLink>
+            <NavLink
+              to="/products"
               className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 "
             >
               Products
-            </a>
-            <a
-              href="#"
+            </NavLink>
+            <NavLink
+              to={'/about'}
               className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
             >
               About
-            </a>
-            <a
-              href="#"
+            </NavLink>
+            <NavLink
+              to={'/contact-us'}
               className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
             >
               Contact
-            </a>
+            </NavLink>
           </div>
           <div className="hidden md:flex items-center space-x-1">
             <a
