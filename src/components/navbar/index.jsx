@@ -102,18 +102,18 @@ export default function Navbar() {
       </div>
       {/* Mobile Menu */}
       <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-green-100">
+        <NavLink to={'/'} className="block py-2 px-4 text-sm hover:bg-green-100">
         Home
-        </a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-green-100">
+        </NavLink>
+        <NavLink to={'/products'} className="block py-2 px-4 text-sm hover:bg-green-100">
           Products
-        </a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-green-100">
+        </NavLink>
+        <NavLink to={'/about'} className="block py-2 px-4 text-sm hover:bg-green-100">
           About
-        </a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-green-100">
+        </NavLink>
+        <NavLink to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100">
           Contact
-        </a>
+        </NavLink>
         
       </div>
     </nav>
