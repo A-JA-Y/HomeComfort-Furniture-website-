@@ -50,25 +50,25 @@ export default function Footer() {
           <div className="icons float-right  ">
             <div className=" flex  items-center justify-center my-6  space-x-1">
               <a
-                href="#"
+                href="https://github.com/A-JA-Y" target="_blank"
                 className=" px-2  text-gray-500 font-semibold hover:text-gray-700 transition duration-300 "
               >
                 <FaGithub className="w-7 h-6 hover:h-7 transition duration-400 drop-shadow-xl" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/ajay-kumar-358758227/" target="_blank"
                 className=" px-2 text-gray-500 font-semibold hover:text-blue-800 transition duration-300"
               >
                 <FaLinkedin className="w-7 h-6 hover:h-7 transition duration-400 drop-shadow-xl" />
               </a>
               <a
-                href="#"
+                href="https://x.com/sir_rrolex" target="_blank"
                 className=" px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300"
               >
                 <FaTwitter className="w-7 h-6 hover:h-7 transition duration-400 drop-shadow-xl" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@zeroToOne-tv2pd" target="_blank"
                 className=" px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300"
               >
                 <FaYoutube className="w-7 h-6 hover:h-7 transition duration-400 drop-shadow-xl" />
