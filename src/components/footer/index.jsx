@@ -28,8 +28,8 @@ export default function Footer() {
       <div className="footer bg-black h-full grid grid-cols-1 lg:grid-cols-2 max-w-8xl mx-auto">
         <div className="container py-10 px-4 lg:px-0 lg:w-1/2 mx-auto">
           <div className="left ml-0 lg:ml-10">
-            <div className="text-7xl flex flex-col">
-              <span className="text-green-400 lg:text-7xl sm:text-3xl">
+            <div className="lg:text-7xl sm:text-4xl flex flex-col">
+              <span className="text-green-400 sm:text-4xl  ">
                 eco<span className="text-white">Furniture</span>
               </span>
               <span className="text-white text-2xl mt-4">Visit us at:</span>
