@@ -78,7 +78,7 @@ export default function Vision() {
               <img
                 src={people[activeIndex].profile}
                 alt="profile"
-                className="w-1/4 float-right rounded-full"
+                className="lg:w-1/4 sm:w-1/2 float-right rounded-full"
               />
             </div>
           </div>
