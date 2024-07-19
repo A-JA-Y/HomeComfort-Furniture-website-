@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="container py-10 px-4 lg:px-0 lg:w-1/2 mx-auto">
           <div className="left ml-0 lg:ml-10">
             <div className="text-7xl flex flex-col">
-              <span className="text-green-400">
+              <span className="text-green-400 lg:text-7xl sm:text-3xl">
                 eco<span className="text-white">Furniture</span>
               </span>
               <span className="text-white text-2xl mt-4">Visit us at:</span>
