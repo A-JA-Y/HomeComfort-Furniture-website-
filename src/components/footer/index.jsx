@@ -78,7 +78,7 @@ export default function Footer() {
               <LoadScript googleMapsApiKey="AIzaSyBcYmuVVhnd1GPPqDbVcPlwTWR4f8L0Z3I">
                 {currentPosition && (
                   <GoogleMap
-                    mapContainerStyle={{ height: "200px", width: "400px" }}
+                    mapContainerStyle={{ height: "150px", width: "300px" }}
                     center={currentPosition}
                     zoom={12}
                   >
