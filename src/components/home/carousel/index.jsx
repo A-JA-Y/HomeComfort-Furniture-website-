@@ -78,7 +78,7 @@ export default function MyCarousel() {
           </div>
           {activeIndex > 0 && (
             <button
-              className="absolute bg-slate-500 w-9 h-9  rounded-full float-left hover:text-green-600 transition-colors  delay-200"
+              className="absolute bg-slate-500 bg-opacity-40 w-9 h-9  rounded-full float-left hover:text-green-600 transition-colors  delay-200"
               onClick={handlePrevious}
             >
               <FaArrowLeft className=" m-2" />
@@ -86,7 +86,7 @@ export default function MyCarousel() {
           )}
           {activeIndex < images.length - 1 && (
             <button
-              className=" bg-slate-500 w-9 h-9  rounded-full absolute right-0 hover:text-green-600 transition-colors  delay-200  "
+              className=" bg-slate-500 bg-opacity-40 w-9 h-9  rounded-full absolute right-1 hover:text-green-600 transition-colors  delay-200  "
               onClick={handleNext}
             >
               <FaArrowRight className="m-2" />
