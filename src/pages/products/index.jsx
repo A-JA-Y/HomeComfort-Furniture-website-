@@ -6,7 +6,7 @@ export default function Products() {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
-  const [disableButton, setDisableButton] = useState(false);
+  
   async function fetchProducts() {
     try{
         setLoading(true);
@@ -46,14 +46,14 @@ export default function Products() {
             products.map((item)=>{
                 return <div className="product w-full flex items-center justify-center flex-col m-2 bg-slate-600 bg-opacity-5 rounded-xl drop-shadow-lg" key={item.id}><img className='hover:scale-125 transition-transform' src={item.thumbnail} alt={item.title}/>
                 <p className='font-semibold text-3xl text-wrap mb-3 font-sans px-3 mx-2'>{item.title}</p>
-                <button className='btn lg:w-1/4 sm:w-1/2 sm:px-4 mb-4 lg:p-2 bg-green-700 hover:bg-green-500 rounded-lg hover:scale-110  transition-transform lg:hover:font-bold sm:hover:font-medium '><h1 className='mx-3'><a href="https://www.flipkart.com/search?q=furniture&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" target='_blank'>Buy now</a></h1></button>
+                <button className='btn w-1/3  sm:px-4 mb-4 lg:p-2 bg-green-700 hover:bg-green-500 rounded-lg hover:scale-110  transition-transform lg:hover:font-bold sm:hover:font-medium '><h1 className='mx-3'><a href="https://www.flipkart.com/search?q=furniture&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" target='_blank'>Buy now</a></h1></button>
                 </div>
             }) : null
         }
     </div>
 
     <div className="button-container ">
-        <button disabled={disableButton} onClick={()=> setCount(count + 1)} className='btn w-full bg-cyan-500 '>More products coming soon!</button>
+        <button disabled={true} onClick={()=> setCount(count + 1)} className='btn w-full bg-cyan-500 '>More products coming soon!</button>
         
     </div>
   </div>
