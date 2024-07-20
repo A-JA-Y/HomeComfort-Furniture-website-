@@ -57,7 +57,7 @@ export default function MyCarousel() {
               ) : activeIndex === 1 ? (
                 <span className="py-10 text-center text-white">
                   <h1 className=" sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold drop-shadow-md">
-                    World Class Interior Design and Setup
+                    Classic Interior Design
                   </h1>
                   <br />
                   Just Click on the button below!
