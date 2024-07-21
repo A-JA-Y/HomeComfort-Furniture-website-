@@ -19,7 +19,7 @@ export default function Navbar() {
               <NavLink to={'/'} className="flex items-center py-4 px-2">
                 <img src={logo} alt="Logo" className="h-8 w-8 mr-2 hover:scale-110 rounded drop-shadow-md " />
                 <span className="font-semibold text-gray-500 text-lg hover:text-green-600 transition delay-300 ">
-                  EcoFurniture
+                  HomeComfort
                 </span>
               </NavLink>
             </div>
@@ -28,7 +28,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-1">
             <NavLink
               to={'/'}
-              className="py-4 px-2 text-green-500  border-green-500 font-semibold "
+              className="py-4 px-2  text-green-500  border-green-500 font-semibold "
             >
               <div className="home flex text-center items-center content-evenly"><FaHome className="mx-1 "/>Home</div>
               

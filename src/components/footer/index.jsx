@@ -3,24 +3,20 @@ import { FaTwitter, FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 export default function Footer() {
+  // const [currentPosition, setCurrentPosition] = useState(null);
+
   const [currentPosition, setCurrentPosition] = useState(null);
 
   useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        () => {
+    
           setCurrentPosition({
             lat: 28.4744,
             lng: 77.504,
           });
-        },
-        (error) => {
-          console.error("Error getting location:", error);
-        }
-      );
-    } else {
-      console.error("Geolocation is not supported by this browser.");
-    }
+        
+        
+      
+    
   }, []);
 
   return (
@@ -30,12 +26,12 @@ export default function Footer() {
           <div className="left ml-0 lg:ml-10">
             <div className="lg:text-7xl sm:text-4xl flex flex-col">
               <span className="text-green-400 sm:text-4xl  ">
-                eco<span className="text-white">Furniture</span>
+                home<span className="text-white">Comfort</span>
               </span>
               <span className="text-white text-2xl mt-4">Visit us at:</span>
               <p className="address text-white text-xl text-wrap mt-2">
-                Vikash Nagar Near Panchmukhi Hanuman Mandir,
-                <br /> Bhiwadi Road Dharuhera, Haryana, India 301019
+                Sector PI ,near Eldeco green meadows, Greater Noida ,
+                <br /> Gautambudhdhanagar,Uttar Pradesh, India 201310
               </p>
               <span className="text-white text-2xl mt-4">
                 Call Us: +91-9260967689

@@ -72,7 +72,7 @@ export default function MyCarousel() {
                 </span>
               )}
               <button className=" hover:cursor-pointer hover:scale-110 transition-transform bg-green-700 w-36 h-10 rounded outline-none hover:bg-green-500 delay-50 p-1 text-xs font-medium ">
-                Visit Our Showroom
+                <a href="https://www.google.com/maps/place/Greater+Noida,+Uttar+Pradesh/@28.4985622,77.3511807,11z/data=!3m1!4b1!4m6!3m5!1s0x390cea64b8f89aef:0xec0ccabb5317962e!8m2!3d28.4743879!4d77.5039904!16zL20vMGN3OXEy?authuser=0&entry=ttu" target="_blank" rel="noreference">Visit Our Showroom</a>
               </button>
             </div>
           </div>
